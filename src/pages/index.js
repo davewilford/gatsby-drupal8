@@ -10,7 +10,7 @@ const IndexPage = ({data}) => (
   <StaticQuery
     query={graphql`
       query {
-        allNodeArticle {
+        allNodeArticle(filter: {langcode: {eq: "en"}}) {
           edges {
             node {
               title
